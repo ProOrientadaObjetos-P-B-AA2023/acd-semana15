@@ -1,5 +1,4 @@
 package paquete1;
-
 import java.lang.reflect.Field;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -7,31 +6,20 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 public class DocenteTest {
     private Docente instance;
-    
     public DocenteTest() {
     }
-    
     @BeforeClass
-    public static void setUpClass() {
-        
-    }
-    
+    public static void setUpClass() {     }
     @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    public static void tearDownClass() {     }
     @Before
     public void setUp() {
         instance = new Docente();
     }
-    
     @After
-    public void tearDown() {
-    }
-
+    public void tearDown() {     }
     @Test
     public void testEstablecerNombres() throws NoSuchFieldException, 
             IllegalArgumentException, 
@@ -43,7 +31,6 @@ public class DocenteTest {
         field.setAccessible(true);
         assertEquals(field.get(instance), "rené");
     }
-    
     @Test
     public void testObtenerNombres() {
         System.out.println("obtenerNombres");
@@ -51,8 +38,6 @@ public class DocenteTest {
         instance.establecerNombres(nom);
         assertEquals(instance.obtenerNombres(), "René");
     }
-
-    
     @Test
     public void testEstablecerTipo() throws NoSuchFieldException, 
             IllegalArgumentException,
@@ -64,7 +49,6 @@ public class DocenteTest {
         field.setAccessible(true);
         assertEquals(field.get(instance), "contratado");
     }
-
     /**
      * Test of obtenerTipo method, of class Docente.
      */
@@ -75,7 +59,5 @@ public class DocenteTest {
         instance.establecerTipo(expResult);
         String result = instance.obtenerTipo();
         assertEquals(expResult, result);
-        
     }
-    
 }

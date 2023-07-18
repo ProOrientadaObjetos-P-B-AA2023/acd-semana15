@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete1;
-
 import paquete1.Estudiante;
 import java.lang.reflect.Field;
 import org.junit.After;
@@ -13,34 +7,19 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-/**
- *
- * @author reroes
- */
 public class EstudianteTest {
-    private Estudiante instance;
-    
-    public EstudianteTest() {
-    }
-    
+    private Estudiante instance;    
+    public EstudianteTest() {     }
     @BeforeClass
-    public static void setUpClass() {
-    }
-    
+    public static void setUpClass() {  }
     @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    public static void tearDownClass() {     }
     @Before
     public void setUp() {
         instance = new Estudiante();
     }
-    
     @After
-    public void tearDown() {
-    }
-
+    public void tearDown() {     }
     /**
      * Test of establecerNombresEstudiante method, of class Estudiante.
      * @throws java.lang.IllegalAccessException
@@ -57,8 +36,6 @@ public class EstudianteTest {
         Field field = instance.getClass().getDeclaredField("nombresEstudiante");
         assertEquals(field.get(instance), "rené");
     }
-
-    
     @Test
     public void testEstablecerApellidoEstudiante() throws IllegalArgumentException, 
             NoSuchFieldException, 
@@ -69,8 +46,6 @@ public class EstudianteTest {
         Field field = instance.getClass().getDeclaredField("apellidosEstudiante");
         assertEquals(field.get(instance), "Elizalde");
     }
-
-    
     @Test
     public void testEstablecerIdentificacionEstudiante() throws 
             IllegalArgumentException, 
@@ -82,8 +57,6 @@ public class EstudianteTest {
         Field field = instance.getClass().getDeclaredField("identificacionEstudiante");
         assertEquals(field.get(instance), "110011");
     }
-
-    
     @Test
     public void testEstablecerEdadEstudiante() throws 
             IllegalArgumentException, 
@@ -96,7 +69,6 @@ public class EstudianteTest {
         Field field = instance.getClass().getDeclaredField("edadEstudiante");
         assertEquals(field.get(instance), 30);
     }
-
     /**
      * Test of obtenerNombresEstudiante method, of class Estudiante.
      */
@@ -107,9 +79,7 @@ public class EstudianteTest {
         instance.establecerNombresEstudiante("René");
         String result = instance.obtenerNombresEstudiante();
         assertEquals(expResult, result);
-        
     }
-
     /**
      * Test of obtenerApellidoEstudiante method, of class Estudiante.
      */
@@ -120,9 +90,7 @@ public class EstudianteTest {
         instance.establecerApellidoEstudiante("Elizalde");
         String result = instance.obtenerApellidoEstudiante();
         assertEquals(expResult, result);
-        
     }
-
     /**
      * Test of obtenerIdentificacionEstudiante method, of class Estudiante.
      */
@@ -133,9 +101,7 @@ public class EstudianteTest {
         instance.establecerIdentificacionEstudiante("11002211");
         String result = instance.obtenerIdentificacionEstudiante();
         assertEquals(expResult, result);
-        
     }
-
     /**
      * Test of obtenerEdadEstudiante method, of class Estudiante.
      */
@@ -146,7 +112,5 @@ public class EstudianteTest {
         instance.establecerEdadEstudiante(30);
         int result = instance.obtenerEdadEstudiante();
         assertEquals(expResult, result);
-        
     }
-    
 }

@@ -1,11 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete1;
-
-
 import java.lang.reflect.Field;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -13,34 +6,19 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-/**
- *
- * @author reroes
- */
 public class EstudianteDistanciaTest {
-    private EstudianteDistancia instance;
-    
-    public EstudianteDistanciaTest() {
-    }
-    
+    private EstudianteDistancia instance;    
+    public EstudianteDistanciaTest() {     }
     @BeforeClass
-    public static void setUpClass() {
-    }
-    
+    public static void setUpClass() {     }
     @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    public static void tearDownClass() {     }
     @Before
     public void setUp() {
         instance = new EstudianteDistancia();
     }
-    
     @After
-    public void tearDown() {
-    }
-
+    public void tearDown() { }
     @Test
     public void testEstablecerNumeroAsginaturas()  throws 
             IllegalArgumentException, 
@@ -52,10 +30,7 @@ public class EstudianteDistanciaTest {
         Field field = instance.getClass().getDeclaredField("numeroAsignaturas");
         field.setAccessible(true);
         assertEquals(field.get(instance), 10);
-        
     }
-
-    
     @Test
     public void testEstablecerCostoAsignatura()  throws 
             IllegalArgumentException, 
@@ -68,8 +43,6 @@ public class EstudianteDistanciaTest {
         field.setAccessible(true);
         assertEquals(field.get(instance), 1.0);
     }
-
-    
     @Test
     public void testCalcularMatriculaDistancia() throws 
             IllegalArgumentException, 
@@ -83,20 +56,14 @@ public class EstudianteDistanciaTest {
         field.setAccessible(true);
         assertEquals(field.get(instance), 10.0);
     }
-
-    
     @Test
     public void testObtenerNumeroAsignaturas() {
         System.out.println("obtenerNumeroAsignaturas");
         int expResult = 10;
         instance.establecerNumeroAsginaturas(10);
         int result = instance.obtenerNumeroAsignaturas();
-        
         assertEquals(expResult, result);
-        
     }
-
-    
     @Test
     public void testObtenerCostoAsignatura() {
         System.out.println("obtenerCostoAsignatura");
@@ -105,9 +72,7 @@ public class EstudianteDistanciaTest {
         double result = instance.obtenerCostoAsignatura();
         // https://stackoverflow.com/questions/5939788/junit-assertequalsdouble-expected-double-actual-double-epsilon
         assertEquals(expResult, result, 0.0);
-        
     }
-
     /**
      * Test of obtenerMatriculaDistancia method, of class EstudianteDistancia.
      */
@@ -120,7 +85,5 @@ public class EstudianteDistanciaTest {
         double expResult = 10.0;
         double result = instance.obtenerMatriculaDistancia();
         assertEquals(expResult, result, 0.0);
-        
     }
-    
 }
